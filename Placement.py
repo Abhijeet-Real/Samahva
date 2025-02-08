@@ -11,7 +11,7 @@ def fraud_dashboard(df):
     st.title("Fraud Detection Dashboard")
     
     # Layout structure with 3 columns
-    col1, col2, col3 = st.columns(3)
+    col1, col2 = st.columns(2)
     
     with col1:
         st.subheader("Sankey Diagram - Fraud Flow")
@@ -32,13 +32,13 @@ def fraud_dashboard(df):
         except NameError:
             st.write("[Funnel Chart Placeholder]")
         
-    with col2:
         st.subheader("Waterfall Chart - Fraud Impact")
         try:
             plot_waterfall_chart(df)
         except NameError:
             st.write("[Waterfall Chart Placeholder]")
-    
+
+    with col2:
         st.subheader("Sunburst Chart - Fraud Hierarchy")
         try:
             plot_sunburst_chart(df)
@@ -51,7 +51,6 @@ def fraud_dashboard(df):
         except NameError:
             st.write("[Parallel Coordinates Placeholder]")
     
-    with col3:
         st.subheader("Radial Bar Chart - Model Performance")
         try:
             plot_radial_bar_chart(df)
