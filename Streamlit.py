@@ -8,9 +8,6 @@ from Placement import fraud_dashboard
 file_path = "fraud_data_with_skewness_kurtosis_outliers.csv"
 df = pd.read_csv(file_path)
 
-# Title
-st.title("Fraud Detection Dashboard")
-
 # Apply slicers
 df = slicer(df)
 
