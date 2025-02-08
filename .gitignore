@@ -1,3 +1,4 @@
 .venv/
 .desktop.ini
 Samahva_2025_Caselet.pdf
+__pycache__/
